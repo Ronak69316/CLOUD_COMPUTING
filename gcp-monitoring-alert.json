@@ -1,0 +1,17 @@
+{
+  "displayName": "High CPU Alert",
+  "combiner": "OR",
+  "conditions": [
+    {
+      "displayName": "VM CPU > 70%",
+      "conditionThreshold": {
+        "filter": "metric.type=\"compute.googleapis.com/instance/cpu/utilization\" AND resource.type=\"gce_instance\"",
+        "comparison": "COMPARISON_GT",
+        "thresholdValue": 0.7,
+        "duration": "300s",
+        "trigger": { "count": 1 }
+      }
+    }
+  ],
+  "notificationChannels": ["projects/YOUR_PROJECT_ID/notificationChannels/YOUR_CHANNEL_ID"]
+}

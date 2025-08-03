@@ -1,29 +1,33 @@
-# GCS Static Site Setup with Python
+# Cloud-Based Application Monitoring Project
 
-This project sets up a Google Cloud Storage bucket with:
+This project demonstrates how to set up monitoring and alerting for cloud-based applications using:
 
-- Static website hosting
-- File uploads
-- Public access
-- Lifecycle rules (auto-delete after 30 days)
+- **AWS CloudWatch**
+- **Google Cloud Monitoring**
 
-## Setup
+### 🔍 Features
+- Pre-configured CPU alarms
+- Monitoring dashboards
+- Alert notification setup via SNS (AWS) and Notification Channels (GCP)
 
-1. Install dependencies:
-    ```
-    pip install -r requirements.txt
-    ```
+### 📁 Structure
+- `aws/`: Monitoring setup for AWS EC2 instances
+- `gcp/`: Monitoring setup for Google Cloud Compute Engine (GCE) instances
 
-2. Authenticate:
-    ```
-    gcloud auth application-default login
-    ```
+### 🚀 Usage
+Refer to the `README.md` in each folder (`aws/` and `gcp/`) for detailed setup instructions.
 
-3. Replace `"your-project-id"` in `gcs_setup.py` with your actual GCP Project ID.
+---
 
-4. Run:
-    ```
-    python gcs_setup.py
-    ```
+📌 **Note:** Replace placeholder values such as:
+- `i-REPLACE_WITH_YOUR_INSTANCE_ID`
+- `ACCOUNT_ID`
+- `REGION`
+- `YOUR_PROJECT_ID`
+- `YOUR_CHANNEL_ID`
 
-Enjoy your static website!
+With actual values from your cloud setup before execution.
+
+---
+
+Prepared as part of an internship project submission.

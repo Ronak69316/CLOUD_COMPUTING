@@ -1,0 +1,23 @@
+{
+  "displayName": "VM Monitoring",
+  "gridLayout": {
+    "columns": 2,
+    "widgets": [
+      {
+        "title": "CPU Utilization",
+        "xyChart": {
+          "dataSets": [
+            {
+              "timeSeriesQuery": {
+                "timeSeriesFilter": {
+                  "filter": "metric.type=\"compute.googleapis.com/instance/cpu/utilization\"",
+                  "aggregation": { "alignmentPeriod": "300s", "perSeriesAligner": "ALIGN_MEAN" }
+                }
+              }
+            }
+          ]
+        }
+      }
+    ]
+  }
+}
