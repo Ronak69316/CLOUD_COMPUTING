@@ -1,0 +1,14 @@
+Resources:
+  ApiGateway:
+    Type: AWS::ApiGateway::RestApi
+    Properties:
+      Name: MultiCloudAPI
+  LambdaFunction:
+    Type: AWS::Lambda::Function
+    Properties:
+      Handler: index.handler
+      Role: arn:aws:iam::ACCOUNT_ID:role/lambda-execution-role
+      Code:
+        ZipFile: |
+          YOUR_LAMBDA_CODE_HERE
+      Runtime: nodejs18.x
